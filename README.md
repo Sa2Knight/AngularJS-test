@@ -1,6 +1,8 @@
 # AngularJS-test
 ブラウザのみで動くのですぐに動作確認できます。
 
+![SS](https://raw.githubusercontent.com/Sa2Knight/screenshot/master/angularjs-test.png)
+
 ```
 $ tree --dirsfirst
 .
