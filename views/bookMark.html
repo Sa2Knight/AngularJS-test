@@ -1,0 +1,20 @@
+<input type="text" class="searchQuery" ng-model="bookMark.filterWord" placeholder="絞込ワードを入力">
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th>リンク名</th>
+      <th>概要</th>
+      <th><a href="#/bookmark/new">追加</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="site in bookMark.list | filter:bookMark.filterWord">
+      <td><a href="{{site.url}}">{{site.name}}</a></td>
+      <td>{{site.description}}</td>
+      <td><a href="#/bookmark/new/{{$index}}">編集</a></td>
+    </tr>
+  </tbody>
+</table>
+<div class="debug">
+  {{bookMark}}
+</div>

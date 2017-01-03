@@ -1,0 +1,19 @@
+<form name="updateBookMark" ng-submit="bookMark.update()">
+  <div class='form-group'>
+    <label for="name">リンク名</label>
+    <input type="text" id="name" class="form-control" ng-model="bookMark.site.name" required>
+  </div>
+  <div class='form-group'>
+    <label for="url">URL</label>
+    <input type="url" id="url" class="form-control" ng-model="bookMark.site.url" required>
+  </div>
+  <div class='form-group'>
+    <label for="description">概要</label>
+    <textarea id="description" class="form-control" ng-model="bookMark.site.description" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" ng-disabled="updateBookMark.$invalid">登録</button>
+  <button type="button" class="btn btn-danger" ng-click="bookMark.delete()">削除</button>
+</form>
+<div class='debug'>
+  {{updateBookMark}}
+</div>

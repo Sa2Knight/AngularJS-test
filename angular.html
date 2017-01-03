@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="myapp">
+  <meta charset="UTF-8">
+  <head>
+    <script src="http://code.angularjs.org/1.4.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script/route.js"></script>
+    <script src="script/taskList.js"></script>
+    <script src="script/bookMark.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>AngularJSで色々遊ぶ</title>
+  </head>
+  <body>
+    <header>
+      <h1>年明け早々AngularJSで遊ぶ</h1>
+      <nav>
+        <div><a href="#/">トップ</a></div>
+        <div><a href="#/taskList">タスク一覧</a></div>
+        <div><a href="#/bookmark">ブックマーク一覧</a></div>
+      </nav>
+    </header>
+    <article ng-view ng-cloak class="pageContainer"></article>
+  </body>
+</html>

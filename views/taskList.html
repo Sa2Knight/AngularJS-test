@@ -1,0 +1,24 @@
+<h2>タスク一覧</h2>
+<span>
+  残留タスク: {{taskList.remaining()}} 件 / {{taskList.tasks.length}} 件
+  [<a href="" ng-click="taskList.removeDoneTasks()">完了済みタスクを消去</a>]
+</span>
+<ul>
+  <li ng-repeat="task in taskList.tasks">
+    <label class="checkbox">
+      <input type="checkbox" ng-model="task.done">
+      <span class="done-{{task.done}}">
+        {{task.text}}
+        [<a href="" ng-click="taskList.removeTask(task)">削除</a>]
+      </span>
+    </label>
+  </li>
+</ul>
+<form name="addForm" ng-submit="taskList.addTodo()">
+  <p class='error' ng-show="taskList.errors.alreadyRegistered">既に登録済みです</p>
+  <input type="text" ng-model="taskList.addText" size="30" required>
+  <input class="btn btn-primary btn-xs" type="submit" value="追加">
+</form>
+<div class='debug'>
+  {{taskList}}
+</div>
